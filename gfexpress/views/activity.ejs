@@ -1,0 +1,45 @@
+<div class="title">
+<%- include layouts/header.ejs %>
+  <div class="page-data">
+   <div class="data-btn">
+           <button onClick="addActivity();">+ Create My Own</button>
+   </div>
+   <div class="data-table">
+    <table border="1" cellpadding="7" cellspacing="7">
+    <tr>
+    <th>Playing What</th>
+    <th>Tell me more</th>
+    <th>Where</th>
+    <th>When</th>
+    <th>Leader</th>
+    <th>Confirmations </th>
+    </tr>
+    <% if(activities.length){
+      for(var i=0; i<activities.length; i++){ %>
+      <tr>
+        <td style="display:none;"><%= activities[i].id %></td>
+        <td><a href ="/activities/<%= activities[i].id %>" ><%= activities[i].activity_name %></td>
+        <td><%= activities[i].description %></td>
+        <td><%= activities[i].location %></td>
+        <td><%= activities[i].schedule %></td>
+        <td><%= activities[i].owner %></td>
+
+        <td>
+
+        </td>
+      </tr>
+    <% }
+    }else{ %>
+                 <tr>
+                    <td colspan="3">No user</td>
+                 </tr>
+    <% } %>
+
+  </table>
+
+</div>
+</div>
+<br/>
+
+</div>
+<%- include layouts/footer.ejs %>

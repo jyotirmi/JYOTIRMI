@@ -1,0 +1,32 @@
+<%- include layouts/header.ejs %>
+<div class="page-data">
+
+  <table cellpadding="11">
+  <form name="newuserform" action= "/users/add" method = "post" accept-charset="UTF-8" >
+      <tr>
+        <td class="label"> First name </td> <td> : <input type = "text" placeHolder="First name" name="firstname" /></td>
+      </tr>
+      <tr>
+          <td class="label"> Last name </td> <td> : <input type = "text" placeHolder="Last name" name="lastname" /></td>
+      </tr>
+      <tr>
+        <td class="label"> Email </td> <td> : <input type = "text" placeHolder="email@gmail.com" name="email" /></td>
+      </tr>
+      <tr>
+          <td class="label"> Username </td> <td> : <input type = "text" placeHolder="User Name" name="username" /></td>
+      </tr>
+      <tr>
+           <td class="label"></td>
+           <td>
+               &nbsp; <input type="submit" name="submit" value="Save">
+              <input type="button" name="cancel" value="Cancel" class="cancel" onClick="cancelAdd()">
+           </td>
+        </tr>
+      </tr>
+      </form>
+    </table>
+
+
+</div>
+
+<%- include layouts/footer.ejs %>

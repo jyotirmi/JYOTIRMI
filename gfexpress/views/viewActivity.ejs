@@ -1,0 +1,51 @@
+<%- include layouts/header.ejs %>
+<div class="page-data">
+
+  <table cellpadding="11">
+  <form name="newuserform" action= "" method = "post" accept-charset="UTF-8" >
+      <tr>
+        <td class="label"> What's  </td> <td> : <%= row[0].activity_name %></td>
+      </tr>
+      <tr>
+          <td class="label"> Tell us more </td> <td> : <%= row[0].description %></td>
+      </tr>
+      <tr>
+        <td class="label"> Where </td> <td> :  <%= row[0].location %></td>
+      </tr>
+      <tr>
+          <td class="label"> When </td> <td> :  <%= row[0].schedule %></td>
+      </tr>
+      <tr>
+          <td class="label"> How many (Gotta have them) </td> <td> :  <%= row[0].min_needed %></td>
+      </tr>
+      <tr>
+          <td class="label"> How many (too full) </td> <td> :  <%= row[0].capacity %></td>
+      </tr>
+      <tr>
+          <td class="label"> Who are welcome </td>
+          <td> :  Anyone
+
+          </td>
+      </tr>
+      <tr>
+          <td class="label"> Confirmations </td>
+          <td> :  5
+
+          </td>
+      </tr>
+      <tr>
+           <td class="label"></td>
+           <td>
+               &nbsp; <input type="submit" name="submit" value="Going">
+              &nbsp; <input type="submit" name="submit" value="Maybe">
+              <input type="button" name="cancel" value="Back" class="cancel" onClick="cancelActivityAdd()">
+           </td>
+        </tr>
+      </tr>
+      </form>
+    </table>
+
+
+</div>
+
+<%- include layouts/footer.ejs %>

@@ -1,0 +1,48 @@
+<%- include layouts/header.ejs %>
+<div class="page-data">
+
+  <table cellpadding="11">
+  <form name="newform" action= "/activities/add" method = "post" accept-charset="UTF-8" >
+      <tr>
+        <td class="label"> What are you starting? </td> <td> : <input type = "text" placeHolder="eg: something awesome" name="activity_name" /></td>
+      </tr>
+      <tr>
+          <td class="label"> Tell us more </td> <td> : <textarea name="textarea"> </textarea></input></td>
+      </tr>
+      <tr>
+        <td class="label"> Where </td> <td> : <input type = "text" placeHolder="eg: Lake Elizabeth, Fremont" name="location" /></td>
+      </tr>
+      <tr>
+          <td class="label"> When </td> <td> : <input type = "text" placeHolder="eg: Every Sunday @6pm" name="schedule" /></td>
+      </tr>
+      <tr>
+          <td class="label"> How many (Gotta have them) </td> <td> : <input type = "text" placeHolder="eg: 6" name="min_needed" /></td>
+      </tr>
+      <tr>
+          <td class="label"> How many (too full) </td> <td> : <input type = "text" placeHolder="eg:20" name="capacity" /></td>
+      </tr>
+      <tr>
+          <td class="label"> Who are welcome </td> <td> :
+                <input type="radio" name="gender" value="guys"> Gals
+                <input type="radio" name="gender" value="gals"> Guys
+                <input type="radio" name="gender" value="anyone"> All welcome
+
+              </input>
+          </td>
+          <input type="hidden" name="owner" value="2">/input>
+      </tr>
+      <tr>
+           <td class="label"></td>
+           <td>
+               &nbsp; <input type="submit" name="submit" value="Save">
+              <input type="button" name="cancel" value="Cancel" class="cancel" onClick="cancelActivityAdd()">
+           </td>
+        </tr>
+      </tr>
+      </form>
+    </table>
+
+
+</div>
+
+<%- include layouts/footer.ejs %>
